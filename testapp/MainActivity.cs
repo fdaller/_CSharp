@@ -4,6 +4,7 @@ using Android.OS;
 using static Android.App.ActionBar;
 using Android.Graphics;
 using System;
+using Android.Views;
 
 namespace testapp
 {
@@ -12,8 +13,14 @@ namespace testapp
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+
             base.OnCreate(savedInstanceState);
 
+        }
+
+        protected override void OnStart()
+        {
+            base.OnStart();
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
 
@@ -28,14 +35,14 @@ namespace testapp
             {
                 CreateEditText();
             };
-            
+
         }
 
         protected override void OnResume()
         {
             base.OnResume();
             this.Window.SetSoftInputMode(Android.Views.SoftInput.AdjustNothing);
-            
+
 
         }
 
@@ -49,7 +56,7 @@ namespace testapp
             testParams.SetMargins(20, 20, 20, 20);
             ET.SetPadding(20, 20, 20, 20);
             ET.SetTextSize(Android.Util.ComplexUnitType.Dip, 25);
-            ET.SetText(Resource.String.app_name);  
+            ET.SetText(Resource.String.app_name);
             testParams.Gravity = Android.Views.GravityFlags.CenterHorizontal;
             ET.LayoutParameters = testParams;
             ET.SetMaxLines(1);
@@ -60,8 +67,18 @@ namespace testapp
             LinearLayout TestLayout = (LinearLayout)FindViewById(Resource.Id.LayoutEditText);
 
             TestLayout.AddView(ET);
+            //ET.RequestFocus();
+
+            ET.Parent.Parent.RequestChildFocus(ET, ET);
+
+
+
+            //ScrollView SV = FindViewById<ScrollView>(Resource.Id.ScrollView);
+            //float test = ET.GetY;
+            //SV.SmoothScrollTo(0, Convert.ToInt16(ET.GetY));
 
         }
+
     }
 }
 
