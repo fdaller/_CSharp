@@ -1603,26 +1603,26 @@ namespace App1
 			// aapt resource value: 0x7f0b0069
 			public const int Button_NOU_Continue = 2131427433;
 			
+			// aapt resource value: 0x7f0b006f
+			public const int Button_WP_Challenge_Drinking = 2131427439;
+			
 			// aapt resource value: 0x7f0b0070
-			public const int Button_WP_Challenge_Drinking = 2131427440;
+			public const int Button_WP_Challenge_Knowledge = 2131427440;
+			
+			// aapt resource value: 0x7f0b006e
+			public const int Button_WP_Challenge_Sports = 2131427438;
 			
 			// aapt resource value: 0x7f0b0071
-			public const int Button_WP_Challenge_Knowledge = 2131427441;
-			
-			// aapt resource value: 0x7f0b006f
-			public const int Button_WP_Challenge_Sports = 2131427439;
-			
-			// aapt resource value: 0x7f0b0072
-			public const int Button_WP_Continue = 2131427442;
+			public const int Button_WP_Continue = 2131427441;
 			
 			// aapt resource value: 0x7f0b0066
 			public const int TextView_NOU_number_of_users = 2131427430;
 			
-			// aapt resource value: 0x7f0b006d
-			public const int TextView_WP_HeyYOU = 2131427437;
+			// aapt resource value: 0x7f0b006c
+			public const int TextView_WP_HeyYOU = 2131427436;
 			
-			// aapt resource value: 0x7f0b006e
-			public const int TextView_WP_PickChallenges = 2131427438;
+			// aapt resource value: 0x7f0b006d
+			public const int TextView_WP_PickChallenges = 2131427437;
 			
 			// aapt resource value: 0x7f0b0058
 			public const int action0 = 2131427416;
@@ -1689,9 +1689,6 @@ namespace App1
 			
 			// aapt resource value: 0x7f0b0022
 			public const int bottom = 2131427362;
-			
-			// aapt resource value: 0x7f0b006b
-			public const int btnNumber = 2131427435;
 			
 			// aapt resource value: 0x7f0b002e
 			public const int buttonPanel = 2131427374;
@@ -1825,8 +1822,8 @@ namespace App1
 			// aapt resource value: 0x7f0b0036
 			public const int scrollView = 2131427382;
 			
-			// aapt resource value: 0x7f0b006c
-			public const int scrollView1 = 2131427436;
+			// aapt resource value: 0x7f0b006b
+			public const int scrollView1 = 2131427435;
 			
 			// aapt resource value: 0x7f0b0049
 			public const int search_badge = 2131427401;
@@ -2107,7 +2104,7 @@ namespace App1
 			public const int support_simple_spinner_dropdown_item = 2130968616;
 			
 			// aapt resource value: 0x7f040029
-			public const int text_view = 2130968617;
+			public const int test_view = 2130968617;
 			
 			// aapt resource value: 0x7f04002a
 			public const int WelcomePageView = 2130968618;

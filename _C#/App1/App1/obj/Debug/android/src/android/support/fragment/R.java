@@ -1831,13 +1831,13 @@ containing a value of this type.
     }
     public static final class id {
         public static int Button_NOU_Continue=0x7f0b0069;
-        public static int Button_WP_Challenge_Drinking=0x7f0b0070;
-        public static int Button_WP_Challenge_Knowledge=0x7f0b0071;
-        public static int Button_WP_Challenge_Sports=0x7f0b006f;
-        public static int Button_WP_Continue=0x7f0b0072;
+        public static int Button_WP_Challenge_Drinking=0x7f0b006f;
+        public static int Button_WP_Challenge_Knowledge=0x7f0b0070;
+        public static int Button_WP_Challenge_Sports=0x7f0b006e;
+        public static int Button_WP_Continue=0x7f0b0071;
         public static int TextView_NOU_number_of_users=0x7f0b0066;
-        public static int TextView_WP_HeyYOU=0x7f0b006d;
-        public static int TextView_WP_PickChallenges=0x7f0b006e;
+        public static int TextView_WP_HeyYOU=0x7f0b006c;
+        public static int TextView_WP_PickChallenges=0x7f0b006d;
         public static int action0=0x7f0b0058;
         public static int action_bar=0x7f0b0045;
         public static int action_bar_activity_content=0x7f0b0000;
@@ -1860,7 +1860,6 @@ containing a value of this type.
         public static int always=0x7f0b001d;
         public static int beginning=0x7f0b001a;
         public static int bottom=0x7f0b0022;
-        public static int btnNumber=0x7f0b006b;
         public static int buttonPanel=0x7f0b002e;
         public static int cancel_action=0x7f0b0059;
         public static int checkbox=0x7f0b003c;
@@ -1905,7 +1904,7 @@ containing a value of this type.
         public static int scrollIndicatorDown=0x7f0b0038;
         public static int scrollIndicatorUp=0x7f0b0035;
         public static int scrollView=0x7f0b0036;
-        public static int scrollView1=0x7f0b006c;
+        public static int scrollView1=0x7f0b006b;
         public static int search_badge=0x7f0b0049;
         public static int search_bar=0x7f0b0048;
         public static int search_button=0x7f0b004a;
@@ -1994,7 +1993,7 @@ containing a value of this type.
         public static int select_dialog_multichoice_material=0x7f040026;
         public static int select_dialog_singlechoice_material=0x7f040027;
         public static int support_simple_spinner_dropdown_item=0x7f040028;
-        public static int text_view=0x7f040029;
+        public static int test_view=0x7f040029;
         public static int welcomepageview=0x7f04002a;
     }
     public static final class mipmap {

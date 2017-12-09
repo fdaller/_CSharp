@@ -102,7 +102,7 @@
     <AndroidResource Include="Resources\layout\NumberOfUsersView.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
-    <AndroidResource Include="Resources\layout\text_view.axml">
+    <AndroidResource Include="Resources\layout\test_view.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

@@ -28,13 +28,13 @@ namespace App1
 
             // Create your application here
             SetContentView(Resource.Layout.test_view);
-            var btnShow = FindViewById<ElegantNumberButton>(Resource.Id.btnNumber);
+            //var btnShow = FindViewById<ElegantNumberButton>(Resource.Id.btnNumber);
 
-            btnShow.Click += delegate
-            {
-                Toast.MakeText(this, "Number : " + btnShow.Number, ToastLength.Short).Show();
-            };
-            btnShow.SetOnValueChangeListener(this);
+            //btnShow.Click += delegate
+            //{
+            //    Toast.MakeText(this, "Number : " + btnShow.Number, ToastLength.Short).Show();
+            //};
+            //btnShow.SetOnValueChangeListener(this);
         }
     }
 }

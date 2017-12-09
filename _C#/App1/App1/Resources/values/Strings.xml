@@ -2,7 +2,7 @@
 <resources>
   <string name="app_name">App1</string>
   <string name = "HEY_YOU">Hey DU!</string>
-  <string name = "PLS_PICK_YOUR_TOPIC">Bitte wähle deine Themen:</string>
+  <string name = "PLS_PICK_YOUR_TOPIC">Bitte wähle deine Bestrafung:</string>
   <string name = "sports_activity">Sport</string>
   <string name = "drinking_activity">Trinken</string>
   <string name = "knowledge_activity">Wissen</string>
