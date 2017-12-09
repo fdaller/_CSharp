@@ -28,6 +28,15 @@ namespace testapp
             {
                 CreateEditText();
             };
+            
+        }
+
+        protected override void OnResume()
+        {
+            base.OnResume();
+            this.Window.SetSoftInputMode(Android.Views.SoftInput.AdjustNothing);
+            
+
         }
 
         private void CreateEditText()
