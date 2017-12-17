@@ -26,7 +26,7 @@ namespace testapp
             base.OnStart();
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
-
+            ScrollView SV = FindViewById<ScrollView>(Resource.Id.ScrollView);
             for (int i = 0; i < 2; i++)                 // Mindestspielerzahl sind 2 Spieler
             {
                 CreateEditText(n++);
@@ -42,18 +42,21 @@ namespace testapp
             button1.Click += (sender, e) =>
             {
                 CreateEditText(n++);
-
+                ScrollView SV = FindViewById<ScrollView>(Resource.Id.ScrollView);
+                //SV.FullScroll(FocusSearchDirection.Down);
+                RunOnUiThread(() =>
+                {
+                    SV.Post(new Java.Lang.Runnable(ScrollHelper));
+                });
             };
 
 
-            //Button button1 = FindViewById<Button>(Resource.Id.button1);
-            //button1.Click += (sender, e) =>
-            //{
-            //    CreateEditText();
-            //};
-
         }
-
+        private void ScrollHelper()
+        {
+            ScrollView sv = (ScrollView)FindViewById(Resource.Id.ScrollView);
+            sv.FullScroll(FocusSearchDirection.Down);
+        }
         private void CreateEditText(int n)
         {
             EditText ET = new EditText(this);
@@ -69,100 +72,12 @@ namespace testapp
             testParams.Gravity = Android.Views.GravityFlags.CenterHorizontal;
             ET.LayoutParameters = testParams;
             ET.SetMaxLines(1);
+            
             LinearLayout TestLayout = (LinearLayout)FindViewById(Resource.Id.LayoutEditText);
 
             TestLayout.AddView(ET);
 
-            for (int index = 0; index < ((ViewGroup)TestLayout).ChildCount; ++index)
-            {
-                View nextChild = TestLayout.GetChildAt(index);
-            }
-
-
-            ScrollView SV = FindViewById<ScrollView>(Resource.Id.ScrollView);
-            scrollToView(SV, ET);                   // Scrollt ganz nach oben????
-
-            //ET.Parent.Parent.Parent.RequestChildFocus(ET, ET);
-          
         }
-
-        /**
-         * Used to scroll to the given view.
-         *
-         * @param scrollViewParent Parent ScrollView
-         * @param view View to which we need to scroll.
-         */
-        private void scrollToView(ScrollView scrollViewParent, View view)
-        {
-            // Get deepChild Offset
-            Point childOffset = new Point();
-            getDeepChildOffset(scrollViewParent, view.Parent, view, childOffset);
-            // Scroll to child.
-            scrollViewParent.SmoothScrollTo(0, childOffset.Y);
-        }
-
-        /**
-         * Used to get deep child offset.
-         * <p/>
-         * 1. We need to scroll to child in scrollview, but the child may not the direct child to scrollview.
-         * 2. So to get correct child position to scroll, we need to iterate through all of its parent views till the main parent.
-         *
-         * @param mainParent        Main Top parent.
-         * @param parent            Parent.
-         * @param child             Child.
-         * @param accumulatedOffset Accumalated Offset.
-         */
-        private void getDeepChildOffset(ViewGroup mainParent, IViewParent parent, View child, Point accumulatedOffset)
-        {
-            ViewGroup parentGroup = (ViewGroup)parent;
-            accumulatedOffset.X += child.Left;
-            accumulatedOffset.Y += child.Top;
-            if (parentGroup.Equals(mainParent))
-            {
-                return;
-            }
-            getDeepChildOffset(mainParent, parentGroup.Parent, parentGroup, accumulatedOffset);
-        }
-
     }
 }
-
-
-
-//LinearLayout TestLayout = (LinearLayout)FindViewById(Resource.Id.LayoutEditText);
-
-//            for (int index = 0; index<((ViewGroup) TestLayout).ChildCount; ++index)
-//            {
-//                View nextChild = TestLayout.GetChildAt(index);
-//            }
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-            
-            
-
-
-
-
-
-
-
-
-
-
 
